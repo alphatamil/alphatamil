@@ -1,0 +1,22 @@
+@import "~src/variables";
+@import "~src/mixin";
+ul {
+  li {
+    color: $homeNavColor;
+    &:hover {
+      cursor: pointer;
+    }
+    a {
+      color: $homeNavColor;
+      padding: 1rem;
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}
+.mainlead {
+  color: rgba($homeNavColor, 0.6);
+  font-size: 2rem;
+  margin: 0;
+}

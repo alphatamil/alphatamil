@@ -1,0 +1,26 @@
+@import "~src/variables";
+@import "~src/mixin";
+.wave {
+  background-color: #0e1e25;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  position: relative;
+  z-index: -10;
+  height: 20rem;
+  margin-top: -246px;
+  @include desktop {
+    height: 30rem;
+    margin-top: -246px;
+  }
+  @include tablet {
+    height: 25rem;
+    margin-top: -246px;
+  }
+}
+.wavepattern {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
