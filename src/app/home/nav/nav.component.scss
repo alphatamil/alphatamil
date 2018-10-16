@@ -1,17 +1,61 @@
 @import "~src/variables";
 @import "~src/mixin";
-ul {
-  li {
+header {
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
     color: $homeNavColor;
+    text-decoration: none;
+    padding: 1rem;
     &:hover {
-      cursor: pointer;
+      color: green;
     }
-    a {
-      color: $homeNavColor;
-      padding: 1rem;
-      &:hover {
-        color: green;
-      }
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .ham {
+    position: relative;
+    z-index: 5;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(100%);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s;
+    &.menuOpen {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @include desktop {
+    .ham {
+      display: none;
+    }
+    nav {
+      position: static;
+      width: auto;
+      padding: 0;
+      min-height: 0;
+      opacity: 1;
+      transform: none;
+      flex-direction: row;
+      background-color: transparent;
     }
   }
 }

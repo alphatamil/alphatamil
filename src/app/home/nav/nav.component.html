@@ -1,15 +1,11 @@
-<ul class="navbar">
-  <li class="brandname">Brandname
-  </li>
-  <div class="pull-right">
-    <li>
+<header class="bannerBg">
+  <div class="wrapper">
+    <a href="#" class="logo">Brandname</a>
+    <a href="#" class="ham" [ngClass]="menuClicked ? 'menuOpen' : ''" (click)="menuexpand()">Menu</a>
+    <nav [ngClass]="menuClicked ? 'menuOpen' : ''" (click)="menuexpand()">
       <a href="#">What We Do</a>
-    </li>
-    <li>
       <a href="#">Our Workflow</a>
-    </li>
-    <li>
       <a href="#">About us</a>
-    </li>
+    </nav>
   </div>
-</ul>
+</header>
